@@ -1,3 +1,3 @@
 # Maurício Mutte - Site
 
-[Acesse o site](https://mauriciomutte.com)
+[Acesse o site](http://mauriciomutte.com)
