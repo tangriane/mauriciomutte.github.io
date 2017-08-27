@@ -1,0 +1,13 @@
+#Site settings
+title: Maurício Mutte Blog
+email: hi@mauriciomutte.com
+description: > 
+  Este é o portfolio de Maurício Mutte, um estudante front-end que ama tecnologia!
+baseurl: ""
+url: "http://mauriciomutte.com/" 
+twitter_username: mauriciomutte
+github_username:  mauriciomutte
+
+# Build settings
+markdown: kramdown
+permalink: /:title

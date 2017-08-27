@@ -1,12 +1,11 @@
-const gulp = require('gulp')
-const cssmin = require('gulp-cssmin')
-const concat = require('gulp-concat')
-const stripCssComments = require('gulp-strip-css-comments')
-const uglify=  require('gulp-uglify')
-const imagemin = require('gulp-imagemin')
-const watch = require('gulp-watch')
-const browserSync = require('browser-sync').create()
-let reload = browserSync.reload
+var gulp = require('gulp')
+var concat = require('gulp-concat')
+var sass = require('gulp-sass')
+var uglify=  require('gulp-uglify')
+var imagemin = require('gulp-imagemin')
+var watch = require('gulp-watch')
+var browserSync = require('browser-sync').create()
+var reload = browserSync.reload
 
 // BrowserSync
 gulp.task('serve', function () {
@@ -15,36 +14,32 @@ gulp.task('serve', function () {
             baseDir: "./"
         }
     })
-    gulp.watch("*.html").on("change", reload)
-    gulp.watch("./assets/css/style.css").on("change", reload)
-    gulp.watch("./assets/js/script.js").on("change", reload)
+    gulp.watch("**/*.html").on("change", reload)
+    gulp.watch("./src/js/script.js").on("change", reload)
+    gulp.watch("./src/*.sass").on("change", reload)
 })
 
-// Agrupar, minificar e remover comentarios do CSS
-gulp.task('css', function(){
-	var css = [
-		'./assets/css/*.css',
-		'./assets/css/style.css'
-	]
-	gulp.src(css)
-		.pipe(concat('style.min.css'))
-		.pipe(stripCssComments({all: true}))
-		.pipe(cssmin())
-		.pipe(gulp.dest('assets/css/'))
+gulp.task('sass', function(){
+	gulp.src('src/*.scss')
+		.pipe(concat('main.css'))
+		.pipe(sass({
+			outputStyle: 'compressed'
+		}))
+		.pipe(gulp.dest('assets/'))	
 })
 
 // Minificação JS
 gulp.task('js', function(){
-	gulp.src('assets/js/*.js')
+	gulp.src('src/js/*.js')
 		.pipe(uglify())
 		.pipe(gulp.dest('assets/js/'))
 })
 
 // Otimização das imagens
 gulp.task('images', function(){
-	gulp.src(['assets/img/*.jpg', 'assets/img/*.png'])
+	gulp.src(['src/img/*.jpg', 'src/img/*.png'])
 		.pipe(imagemin({optimizationLevel: 5, progressive: true, interlaced: true}))
 		.pipe(gulp.dest('assets/img/'))
 })
 
-gulp.task('default', ['serve', 'css', 'js', 'images'])
+gulp.task('default', ['sass', 'js', 'images'])
