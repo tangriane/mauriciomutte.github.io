@@ -9,7 +9,7 @@
   margin-left:  auto;
   margin-right: auto;
 
-  @media (min-width: 38rem){
+  @media (min-width: $screen-sm){
     padding: 5rem 1rem;
   }
 }

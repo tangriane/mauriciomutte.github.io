@@ -1,3 +1,8 @@
+$screen-xs: 520px;  // Extra small screen / phone
+$screen-sm: 760px;  // Small screen / tablet
+$screen-md: 990px;  // Medium screen / desktop
+$screen-lg: 1200px; // Large screen / wide desktop
+
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -12,12 +17,12 @@ body {
 
 html {
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-size: 4vw;
   font-weight: 300;
   line-height: 1.6;
 
-  @media (min-width: 38em) {
-    font-size: 20px;
+  @media (min-width: $screen-sm) {
+    font-size: 1.7vw;
   }
 }
 
