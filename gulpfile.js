@@ -9,14 +9,14 @@ var reload = browserSync.reload
 
 // BrowserSync
 gulp.task('serve', function () {
-    browserSync.init({
-        server: {
-            baseDir: "./"
-        }
-    })
-    gulp.watch("**/*.html").on("change", reload)
-    gulp.watch("./src/js/script.js").on("change", reload)
-    gulp.watch("./src/*.sass").on("change", reload)
+	browserSync.init({
+		server: {
+			baseDir: "./"
+		}
+	})
+	gulp.watch("**/*.html").on("change", reload)
+	gulp.watch("./src/js/script.js").on("change", reload)
+	gulp.watch("./src/*.sass").on("change", reload)
 })
 
 gulp.task('sass', function(){
