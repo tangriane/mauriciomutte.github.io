@@ -16,10 +16,10 @@
 
 .masthead {
 
-  &-title {
+  .masthead-title {
     font-weight: 300;
 
-    a {
+    .masthead-title--a {
       color: $dark-grey;
 
       &:hover,
@@ -34,26 +34,10 @@
 
   }
 
-  &-title--small {
-    margin-bottom: .75rem;
-    font-size: .75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-
-    a {
-      color: $dark-grey;
-
-      &:hover,
-      &:focus {
-        text-decoration: none;
-      }
-    }
-  }
-
   .masthead-nav {
     margin-bottom: 2rem;
 
-    a {
+    .masthead-nav--a {
       color: $light-grey;
       font-weight: 300;
       text-transform: lowercase;
@@ -67,7 +51,7 @@
         text-decoration: none;
       }
 
-      + a {
+      + .masthead-nav--a {
         margin-left: .25rem;
       }
     }
@@ -76,16 +60,16 @@
 }
 
 .page {
-  &-title {
+  .page-title {
     margin-bottom: 2rem;
   }
 }
 
 .post {
-  &-title {
+  .post-title {
     margin-bottom: .25rem;
   }
-  &-date {
+  .post-date {
     margin-bottom: 2rem;
     font-size: .75rem;
     text-transform: uppercase;
@@ -93,10 +77,10 @@
 }
 
 .list {
-  &-post-title {
+  .list-post-title {
     margin-bottom: .25rem;
 
-    a {
+    .list-post-title--a {
       color: $dark-grey;
 
       &:hover,
@@ -105,15 +89,9 @@
       }
     }
   }
-  &-post-date {
+  .list-post-date {
     margin-bottom: 1rem;
     font-size: .75rem;
     text-transform: uppercase;
-  }
-}
-
-.projects-list {
-  a {
-    color: $dark-grey;
   }
 }
