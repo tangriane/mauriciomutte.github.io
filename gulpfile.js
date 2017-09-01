@@ -4,21 +4,30 @@ var sass = require('gulp-sass')
 var uglify=  require('gulp-uglify')
 var imagemin = require('gulp-imagemin')
 var watch = require('gulp-watch')
-var browserSync = require('browser-sync').create()
-var reload = browserSync.reload
+var browserSync = require('browser-sync')
+var cp = require('child_process');
 
-// BrowserSync
-gulp.task('serve', function () {
-	browserSync.init({
+// Build jekyll site
+gulp.task('jekyll-build', function (done) {
+	return cp.spawn('bundle', ['exec', 'jekyll build'], {stdio: 'inherit'})
+		.on('close', done);
+});
+
+// Rebuild Jekyll & do page reload
+gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
+	browserSync.reload();
+});
+
+// Browser-sync
+gulp.task('browser-sync', ['jekyll-build'], function() {
+	browserSync({
 		server: {
-			baseDir: "./"
+			baseDir: '_site'
 		}
-	})
-	gulp.watch("**/*.html").on("change", reload)
-	gulp.watch("./src/js/script.js").on("change", reload)
-	gulp.watch("./src/*.sass").on("change", reload)
-})
+	});
+});
 
+// Saas task
 gulp.task('sass', function(){
 	gulp.src('src/*.scss')
 		.pipe(concat('main.css'))
@@ -28,14 +37,14 @@ gulp.task('sass', function(){
 		.pipe(gulp.dest('assets/'))	
 })
 
-// Minificação JS
+// Javascript task
 gulp.task('js', function(){
 	gulp.src('src/js/*.js')
 		.pipe(uglify())
 		.pipe(gulp.dest('assets/js/'))
 })
 
-// Otimização das imagens
+// Images task
 gulp.task('images', function(){
 	gulp.src(['src/img/*.jpg', 'src/img/*.png'])
 		.pipe(imagemin({optimizationLevel: 5, progressive: true, interlaced: true}))
