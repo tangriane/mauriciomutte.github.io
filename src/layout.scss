@@ -10,53 +10,184 @@
   margin-right: auto;
 
   @media (min-width: $screen-sm){
-    padding: 5rem 1rem;
+    padding: 2rem 1rem;
   }
 }
 
-.masthead {
+.header {
+  background-color: $dark-grey;
+  padding: 7px 25px 3px;
+  text-align: center;
 
-  .masthead-title {
-    font-weight: 300;
+  @media (min-width: $screen-sm){
+    text-align: left;
 
-    .masthead-title--a {
-      color: $dark-grey;
-
-      &:hover,
-      &:focus {
-        text-decoration: none;
-      }
+    .logo, .logo__img, .navbar, .social {
+      display: inline-block
     }
 
-    span {
-      color: $dark-white;
+    .logo,
+    .navbar,
+    .social {
+      width: 33%;    
     }
 
-  }
-
-  .masthead-nav {
-    margin-bottom: 2rem;
-
-    .masthead-nav--a {
-      color: $light-grey;
-      font-weight: 300;
-      text-transform: lowercase;
-      -webkit-transition: all .2s ease;
-         -moz-transition: all .2s ease;
-              transition: all .2s ease;
-
-      &:hover,
-      &:focus {
-        color: $dark-grey;
-        text-decoration: none;
-      }
-
-      + .masthead-nav--a {
-        margin-left: .25rem;
-      }
+    .social {
+      vertical-align: top;
+      text-align: right;
     }
   }
 
+  .logo {
+    .logo--link {
+
+      .logo__img {
+        height: 100%;
+        margin: auto;
+        margin-bottom: 0px;    
+        width: 60px;
+      }
+    }    
+  }
+
+  .navbar {
+    vertical-align: top;
+    @media (min-width: $screen-lg){
+      margin-top: .1%;
+    }
+
+    .nav {
+      margin-bottom: 0px;
+      text-align: center;    
+
+      .nav__item {
+        display: inline-block;
+        list-style: none;
+
+        .nav--link {
+          color: $white;
+          font-size: .8rem;          
+          font-weight: bold;
+          margin: 0 10px;
+          text-transform: uppercase;
+        }
+
+        .nav--link:hover {
+          color: $dark-white;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .social {
+
+    .social--link {
+      display: inline-block;
+      
+      .social__img {
+        height: 100%;
+        margin: 8px 8px 0;
+        width: 1rem;
+      }
+    }
+  }
+}
+
+.apresentation {
+  text-align: center;
+  
+  .apresentation__title {
+    font-size: 5.6vh;
+    letter-spacing: 1px;
+  }
+  .apresentation__resum {
+    letter-spacing: 1px;
+    text-align: justify;
+  }
+}
+
+.homeBlog {
+  margin-top: 3em;
+  text-align: center;
+
+  .homeBlog__title {
+    color: $grey;
+    font-size: 5.3vh;
+    margin: 1em 0;
+  }
+
+  .homeBlog__noPost {
+    margin: 1em 0;
+  }
+  .homeBlog__list {
+    text-align: left;
+    margin: 1em 0;
+
+    .homeBlog__list__post--link {
+      display: block;
+      border-bottom: 1px solid $dark-white;
+      margin-top: 1.5em;
+      
+      .homeBlog__list__post {
+        margin-bottom: 0;
+        letter-spacing: 1px;
+
+      }
+
+      .homeBlog__list__postDate {
+        color: $grey;
+        font-size: .75rem;
+        margin-bottom: .5rem;
+        text-transform: uppercase;
+      }
+
+      &:hover {
+        border-color: $grey;
+        text-decoration: none;
+      }
+
+      &:hover .homeBlog__list__post {
+        color: $grey;        
+      }
+    }
+  }
+}
+
+.homeProjects {
+  margin-top: 4em;
+  text-align: center;
+
+  .homeProjects__title {
+    color: $grey;
+    font-size: 5.3vh;
+    margin: 1em 0;
+  }
+
+  .homeProjects__list {
+    text-align: left;
+    padding-bottom: .5em;
+
+    .homeProjects__list__project {
+      list-style: none;
+      margin-top: 1.2em;
+      
+      .homeProjects__list__project--link {
+        border-bottom: 1px solid $dark-white;      
+        color: $grey;
+        display: block;
+        font-size: 4vh;
+        margin-top: .5em;
+        padding-bottom: .3em;
+      
+        &:hover {
+          text-decoration: none;
+          color: $dark-grey;
+          border-color: $grey;
+        }
+      }
+    }
+  }
 }
 
 .page {
@@ -71,26 +202,6 @@
   }
   .post-date {
     margin-bottom: 2rem;
-    font-size: .75rem;
-    text-transform: uppercase;
-  }
-}
-
-.list {
-  .list-post-title {
-    margin-bottom: .25rem;
-
-    .list-post-title--a {
-      color: $dark-grey;
-
-      &:hover,
-      &:focus {
-        text-decoration: none;
-      }
-    }
-  }
-  .list-post-date {
-    margin-bottom: 1rem;
     font-size: .75rem;
     text-transform: uppercase;
   }

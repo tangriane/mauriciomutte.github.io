@@ -1,11 +1,28 @@
-<header class="masthead">
-  <h1 class="masthead-title">
-    <a class="masthead-title--a" href="/">{{ site.title }} <span> Blog</span></a>
-  </h1>
-  <nav class="masthead-nav">
-    <a class="masthead-nav--a" href="/">Home</a>
-    {% for page in site.pages %}
-      <a class="masthead-nav--a" href="{{ page.url }}">{{ page.title}}</a>
-    {% endfor %}
-  </nav>
+<header class="header">
+  <div class="logo">
+    <a href="/" class="logo--link">
+      <img src="assets/img/logo.png" class="logo__img" alt="Maurício Mutte logo">
+    </a>
+  </div>
+  <div class="navbar">
+    <ul class="nav">
+      <li class="nav__item">
+        <a href="/blog" class="nav--link">Blog</a>
+      </li>
+      <li class="nav__item">
+        <a href="/projetos" class="nav--link">Projetos</a>
+      </li>
+      <li class="nav__item">
+        <a href="/sobre" class="nav--link">Sobre</a>
+      </li>
+    </ul>
+  </div>
+  <div class="social">
+    <a href="https://twitter.com/mauriciomutte" class="social--link" target="_blank">
+      <img src="assets/img/social-twitter.png" alt="Twitter logo" class="social__img">
+    </a>
+    <a href="https://github.com/mauriciomutte" class="social--link" target="_blank">
+      <img src="assets/img/social-github.png" alt="Github logo" class="social__img">
+    </a>
+  </div>
 </header>

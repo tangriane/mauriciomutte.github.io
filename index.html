@@ -2,19 +2,43 @@
 layout: default
 ---
 
-{% if site.posts.size == 0 %}
-	<h2>No posts found :(</h2>
-{% else %}
-	{% for post in site.posts %}
-	<div class="content list">
-		<div class="list-item">
-			<h2 class="list-post-title">
-				<a class="list-post-title--a" href="{{ post.url }}">{{ post.title }}</a>
-			</h2>
-			<div class="list-post-date">
-				<time>{{ post.date | date_to_string }}</time>
+<section class="apresentation">
+	<h2 class="apresentation__title">Hello, I'm Maurício!</h2>
+	<p class="apresentation__resum">Olá, eu sou o Maurício Mutte, um estudante front-end por hobby que atualmente vive em Porto Alegre. Ainda sou muito jovem, porem, estou diariamente estudando novas tecnologias e constantemente à procura das melhores formas de resolver algum problema encontrado.</p>
+	<a href="/sobre" class="button button--black">Sobre mim</a>
+</section>
+
+<section class="homeBlog">
+	<h2 class="homeBlog__title">Blog</h2>
+	{% if site.posts.size == 0 %}
+		<h3 class="homeBlog__noPost">No posts found :(</h3>	
+	{% else %}
+		{% for post in site.posts limit:3 %}
+			<div class="homeBlog__list">
+				<a class="homeBlog__list__post--link" href="{{ post.url }}">
+					<h3 class="homeBlog__list__post">{{ post.title }}</h3>
+					<div class="homeBlog__list__postDate">
+						<time>{{ post.date | date_to_string }}</time>
+					</div>
+				</a>
 			</div>
-		</div>
-	</div>
-	{% endfor %}
-{% endif %}
+		{% endfor %}
+	{% endif %}
+	<a href="/blog" class="button button--default">Mais posts</a>
+</section>
+
+<section class="homeProjects">
+	<h2 class="homeProjects__title">Projetos</h2>
+	<ul class="homeProjects__list">
+		<li class="homeProjects__list__project">
+			<a href="https://mauriciomutte.github.io/Find-your-address" class="homeProjects__list__project--link" target="_blank">Find-your-address</a>
+		</li>
+		<li class="homeProjects__list__project">
+			<a href="https://github.com/mauriciomutte/Comangit#comangit--alguns-comandos-do-git" class="homeProjects__list__project--link" target="_blank">Comangit</a>
+		</li>
+		<li class="homeProjects__list__project">
+			<a href="https://mauriciomutte.github.io/Next-holiday/" class="homeProjects__list__project--link" target="_blank">Next-holiday</a>
+		</li>
+	</ul>
+	<a href="/projetos" class="button button--default">Mais projetos</a>
+</section>

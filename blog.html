@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<h2>Blog</h2>
+
+{% if site.posts.size == 0 %}
+<h3>No posts found :(</h3>
+{% else %}
+{% for post in site.posts %}
+  <div class="content list">
+    <div class="list-item">
+      <h3 class="list-post-title">
+        <a class="list-post-title--a" href="{{ post.url }}">{{ post.title }}</a>
+      </h3>
+      <div class="list-post-date">
+        <time>{{ post.date | date_to_string }}</time>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+{% endif %}
