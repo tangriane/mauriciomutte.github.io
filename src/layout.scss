@@ -22,74 +22,77 @@
   @media (min-width: $screen-sm){
     text-align: left;
 
-    .logo, .logo__img, .navbar, .social {
-      display: inline-block
+    &__logo, 
+    &__logo__img, 
+    &__social {
+      display: inline-block;
     }
 
-    .logo,
-    .navbar,
-    .social {
+    &__logo,
+    &__social {
       width: 33%;    
     }
 
-    .social {
+    &__social {
       vertical-align: top;
       text-align: right;
     }
   }
 
-  .logo {
-    .logo--link {
-
-      .logo__img {
-        height: 100%;
-        margin: auto;
-        margin-bottom: 0px;    
-        width: 60px;
-      }
+  &__logo {
+    &__img {
+      height: 100%;
+      margin: auto;
+      margin-bottom: 0px;    
+      width: 60px;
     }    
   }
 
-  .navbar {
-    vertical-align: top;
-    @media (min-width: $screen-lg){
-      margin-top: .1%;
+  &__social {
+
+    &__link {
+      display: inline-block;
     }
-
-    .nav {
-      margin-bottom: 0px;
-      text-align: center;    
-
-      .nav__item {
-        display: inline-block;
-        list-style: none;
-
-        .nav--link {
-          color: $white;
-          font-size: .8rem;          
-          font-weight: bold;
-          margin: 0 10px;
-          text-transform: uppercase;
-        }
-
-        .nav--link:hover {
-          color: $dark-white;
-          text-decoration: none;
-        }
-      }
+    
+    &__img {
+      height: 100%;
+      margin: 8px 8px 0;
+      width: 1rem;
     }
   }
+}
 
-  .social {
+.navbar {
+  vertical-align: top;
 
-    .social--link {
-      display: inline-block;
-      
-      .social__img {
-        height: 100%;
-        margin: 8px 8px 0;
-        width: 1rem;
-      }
+  @media (min-width: $screen-sm){
+    display: inline-block;
+    width: 33%;    
+  }
+  @media (min-width: $screen-lg){
+    margin-top: .1%;
+  }
+
+  &__nav {
+    margin-bottom: 0px;
+    text-align: center;    
+  }
+   
+  &__item {
+    display: inline-block;
+    list-style: none;
+  }
+
+  &__link {
+    color: $white;
+    font-size: .8rem;          
+    font-weight: bold;
+    margin: 0 10px;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $dark-white;
+      text-decoration: none;
     }
   }
 }
@@ -97,11 +100,11 @@
 .apresentation {
   text-align: center;
   
-  .apresentation__title {
+  &__title {
     font-size: 5.6vh;
     letter-spacing: 1px;
   }
-  .apresentation__resum {
+  &__resum {
     letter-spacing: 1px;
     text-align: justify;
   }
@@ -111,46 +114,43 @@
   margin-top: 3em;
   text-align: center;
 
-  .homeBlog__title {
+  &__title {
     color: $grey;
     font-size: 5.3vh;
     margin: 1em 0;
   }
 
-  .homeBlog__noPost {
+  &__noPost {
     margin: 1em 0;
   }
-  .homeBlog__list {
-    text-align: left;
-    margin: 1em 0;
+  &__post {
+    margin-bottom: 0;
+    letter-spacing: 1px;
 
-    .homeBlog__list__post--link {
+    &__link {
       display: block;
       border-bottom: 1px solid $dark-white;
-      margin-top: 1.5em;
-      
-      .homeBlog__list__post {
-        margin-bottom: 0;
-        letter-spacing: 1px;
-
-      }
-
-      .homeBlog__list__postDate {
-        color: $grey;
-        font-size: .75rem;
-        margin-bottom: .5rem;
-        text-transform: uppercase;
-      }
+      text-align: left;
+      margin: 2em 0 1em;
 
       &:hover {
         border-color: $grey;
         text-decoration: none;
       }
-
-      &:hover .homeBlog__list__post {
+  
+      &:hover .homeBlog__post {
         color: $grey;        
       }
     }
+
+    &__postDate {
+      color: $grey;
+      font-size: .75rem;
+      margin-bottom: .5rem;
+      text-transform: uppercase;
+    }
+
+    
   }
 }
 
@@ -158,33 +158,33 @@
   margin-top: 4em;
   text-align: center;
 
-  .homeProjects__title {
+  &__title {
     color: $grey;
     font-size: 5.3vh;
     margin: 1em 0;
   }
 
-  .homeProjects__list {
+  &__list {
     text-align: left;
     padding-bottom: .5em;
+  }
 
-    .homeProjects__list__project {
-      list-style: none;
-      margin-top: 1.2em;
-      
-      .homeProjects__list__project--link {
-        border-bottom: 1px solid $dark-white;      
-        color: $grey;
-        display: block;
-        font-size: 4vh;
-        margin-top: .5em;
-        padding-bottom: .3em;
-      
-        &:hover {
-          text-decoration: none;
-          color: $dark-grey;
-          border-color: $grey;
-        }
+  &__project {
+    list-style: none;
+    margin-top: 1.2em;
+    
+    &__link {
+      border-bottom: 1px solid $dark-white;      
+      color: $grey;
+      display: block;
+      font-size: 4vh;
+      margin-top: .5em;
+      padding-bottom: .3em;
+    
+      &:hover {
+        text-decoration: none;
+        color: $dark-grey;
+        border-color: $grey;
       }
     }
   }

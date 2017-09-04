@@ -61,29 +61,29 @@ a {
   letter-spacing: 1px;
   margin: 1em auto;
   text-align: center;
-}
-.button:hover {
-}
 
-.button--black {
-  background-color: $dark-grey;
-  color: $white;
-}
-.button--black:hover{
-  background-color: $grey;
-  border-color: $grey;
-  text-decoration: none;
-}
+  &--black {
+    background-color: $dark-grey;
+    color: $white;
+  
+    &:hover {
+      background-color: $grey;
+      border-color: $grey;
+      text-decoration: none;
+    }
+  }
 
-.button--default {
-  color: $dark-grey;
-  min-width: 200px;
-  text-transform: uppercase;
-}
-.button--default:hover{
-  background-color: $dark-grey;
-  color: $white;
-  text-decoration: none;
+  &--default {
+    color: $dark-grey;
+    min-width: 200px;
+    text-transform: uppercase;
+  
+    &:hover {
+      background-color: $dark-grey;
+      color: $white;
+      text-decoration: none;
+    }
+  }
 }
 
 @media (min-width: $screen-sm){
