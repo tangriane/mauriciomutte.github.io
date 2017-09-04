@@ -2,7 +2,21 @@
 layout: default
 ---
 
-## Projetos
+<style>
+  h3 {
+    color: #d8d8d8;
+    font-size: 5.5vh;
+  }
+  ul li {
+    margin: .5em 0;
+  }
+  ul li a {
+    color: #515151;
+    font-size: 3.7vh;
+  }
+</style>
+
+<h2 class="pageTitle">Projetos</h2>
 
 ### 2017
 

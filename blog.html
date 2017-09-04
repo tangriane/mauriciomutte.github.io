@@ -2,21 +2,20 @@
 layout: default
 ---
 
-<h2>Blog</h2>
+
+<h2 class="pageTitle">Blog</h2>
 
 {% if site.posts.size == 0 %}
-<h3>No posts found :(</h3>
+  <h3 class="homeBlog__noPost">No posts found :(</h3>	
 {% else %}
-{% for post in site.posts %}
-  <div class="content list">
-    <div class="list-item">
-      <h3 class="list-post-title">
-        <a class="list-post-title--a" href="{{ post.url }}">{{ post.title }}</a>
-      </h3>
-      <div class="list-post-date">
-        <time>{{ post.date | date_to_string }}</time>
-      </div>
+  {% for post in site.posts %}
+
+  <a class="homeBlog__post__link" href="{{ post.url }}">
+    <h3 class="homeBlog__post">{{ post.title }}</h3>
+    <div class="homeBlog__post__postDate">
+      <time>{{ post.date | date_to_string }}</time>
     </div>
-  </div>
-{% endfor %}
+  </a>
+
+  {% endfor %}
 {% endif %}

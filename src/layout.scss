@@ -81,6 +81,7 @@
   &__item {
     display: inline-block;
     list-style: none;
+    margin: 0;
   }
 
   &__link {
@@ -122,6 +123,7 @@
 
   &__noPost {
     margin: 1em 0;
+    text-align: center
   }
   &__post {
     margin-bottom: 0;
