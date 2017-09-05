@@ -16,10 +16,11 @@
 
 .header {
   background-color: $dark-grey;
-  padding: 7px 25px 3px;
+  padding: 10px 0 5px;
   text-align: center;
-
+  
   @media (min-width: $screen-sm){
+    padding: 7px 25px 3px;    
     text-align: left;
 
     &__logo, 
@@ -34,8 +35,8 @@
     }
 
     &__social {
-      vertical-align: top;
       text-align: right;
+      vertical-align: top;
     }
   }
 
@@ -49,6 +50,9 @@
   }
 
   &__social {
+    @media (max-width: $screen-sm){
+      display: none;
+    }
 
     &__link {
       display: inline-block;
@@ -64,9 +68,11 @@
 
 .navbar {
   vertical-align: top;
+  margin: 5px 0;
 
   @media (min-width: $screen-sm){
     display: inline-block;
+    margin: 0;
     width: 33%;
   }
   @media (min-width: $screen-lg){
