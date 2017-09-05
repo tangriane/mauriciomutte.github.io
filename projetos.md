@@ -1,5 +1,6 @@
 ---
-layout: default
+layout: page
+title: Projetos
 ---
 
 <style>
@@ -15,8 +16,6 @@ layout: default
     font-size: 3.7vh;
   }
 </style>
-
-<h2 class="pageTitle">Projetos</h2>
 
 ### 2017
 

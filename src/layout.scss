@@ -192,6 +192,18 @@
   }
 }
 
+.page {
+
+  &__title {
+    color: $grey;
+    font-size: 6.5vh;
+    letter-spacing: 2px;
+    margin-bottom: 2em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
 .post {
   .post-title {
     margin-bottom: .25rem;
