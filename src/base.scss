@@ -65,7 +65,9 @@ a {
   &--black {
     background-color: $dark-grey;
     color: $white;
-  
+    font-size: 3.4vh;   
+    padding: 1px 0;
+
     &:hover {
       background-color: $grey;
       border-color: $grey;
