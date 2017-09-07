@@ -211,11 +211,23 @@
 }
 
 .post {
-  .post-title {
-    margin-bottom: .25rem;
+
+  &__header {
+    background-color: $grey;
+    color: $white;
+    text-align: center;
+    padding: 3em 0 4em;
   }
-  .post-date {
-    margin-bottom: 2rem;
+
+  &__title {
+    color: $white;
+    font-size: 7.5vh;
+    letter-spacing: 1px;
+    margin: 0 auto 10px;
+    max-width: 600px;
+  }
+
+  &__date {
     font-size: .75rem;
     text-transform: uppercase;
   }
