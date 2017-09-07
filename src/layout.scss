@@ -108,7 +108,7 @@
   text-align: center;
   
   &__title {
-    font-size: 5.6vh;
+    font-size: 2rem;
     letter-spacing: 1px;
   }
   &__resum {
@@ -118,17 +118,17 @@
 }
 
 .homeBlog {
-  margin-top: 3em;
+  margin-top: 4rem;
   text-align: center;
 
   &__title {
     color: $grey;
-    font-size: 5.5vh;
-    margin: 1em 0;
+    font-size: 1.8rem;
+    margin: 1rem 0;
   }
 
   &__noPost {
-    margin: 1em 0;
+    margin: 1.5rem 0;
     text-align: center;
   }
   &__post {
@@ -139,7 +139,7 @@
       display: block;
       border-bottom: 1px solid $dark-white;
       text-align: left;
-      margin: 2em 0 1em;
+      margin: 2rem 0 1rem;
 
       &:hover {
         border-color: $grey;
@@ -163,31 +163,31 @@
 }
 
 .homeProjects {
-  margin-top: 4em;
+  margin-top: 4rem;
   text-align: center;
 
   &__title {
     color: $grey;
-    font-size: 5.5vh;
-    margin: 1em 0;
+    font-size: 1.8rem;
+    margin: 1rem 0;
   }
 
   &__list {
     text-align: left;
-    padding-bottom: .5em;
+    padding-bottom: .5rem;
   }
 
   &__project {
     list-style: none;
-    margin-top: 1.2em;
+    margin-top: 1.2rem;
     
     &__link {
       border-bottom: 1px solid $dark-white;      
       color: $grey;
       display: block;
-      font-size: 4vh;
+      font-size: 1.2rem;
       margin-top: .5em;
-      padding-bottom: .3em;
+      padding-bottom: .3rem;
     
       &:hover {
         text-decoration: none;
@@ -202,7 +202,7 @@
 
   &__title {
     color: $grey;
-    font-size: 6.5vh;
+    font-size: 2rem;
     letter-spacing: 2px;
     margin-bottom: 2em;
     text-align: center;
@@ -216,12 +216,12 @@
     background-color: $grey;
     color: $white;
     text-align: center;
-    padding: 3em 0 4em;
+    padding: 3rem 0 4rem;
   }
 
   &__title {
     color: $white;
-    font-size: 7.5vh;
+    font-size: 2.5rem;
     letter-spacing: 1px;
     margin: 0 auto 10px;
     max-width: 600px;
