@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Projetos
+description: Projetos open-source realizados pelo Maurício
 ---
 
 <style>
