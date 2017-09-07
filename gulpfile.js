@@ -27,8 +27,8 @@ gulp.task('browser-sync', ['jekyll-build'], function() {
 	});
 });
 
-// Saas task
-gulp.task('sass', function(){
+// SCSS task
+gulp.task('scss', function(){
 	gulp.src('src/*.scss')
 		.pipe(concat('main.css'))
 		.pipe(sass({
