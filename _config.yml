@@ -11,3 +11,13 @@ github_username:  mauriciomutte
 # Build settings
 markdown: kramdown
 permalink: /:title
+
+links:
+  - title: Home
+    url: /
+  - title: Blog
+    url: /blog
+  - title: Projetos
+    url: /projetos
+  - title: Sobre
+    url: /sobre
