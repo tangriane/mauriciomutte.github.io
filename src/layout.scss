@@ -232,3 +232,32 @@
     text-transform: uppercase;
   }
 }
+
+.share {
+  border-top: 1px solid $dark-white;
+  margin: 3rem auto 4rem;
+  max-width: 600px;
+  text-align: center;
+  text-decoration: none;  
+  
+  &__title {
+    font-size: 1.5rem;
+    margin: 1rem;
+  }
+
+  &__svg {
+    height: 45px;
+    margin: 15px;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+    width: 45px;    
+  }
+  
+  .share__twitter svg:hover {
+    fill: #1DA1F2;
+  }
+  .share__facebook svg:hover {
+    fill: #3B5998;
+  }
+}
