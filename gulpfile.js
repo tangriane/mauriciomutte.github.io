@@ -39,7 +39,8 @@ gulp.task('scss', function(){
 
 // Javascript task
 gulp.task('js', function(){
-	gulp.src('src/js/*.js')
+	gulp.src('src/js/**/*.js')
+		.pipe(concat('main.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest('assets/js/'))
 })
