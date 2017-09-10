@@ -21,6 +21,7 @@ description: Projetos open-source realizados pelo Maurício
 ### 2017
 
 - [Learning-react](https://github.com/mauriciomutte/Learning-React#learning-react)
+- [ConteudoX](http://mauriciomutte.com/ConteudoX/)
 - [Comangit](https://github.com/mauriciomutte/Comangit#comangit--alguns-comandos-do-git)
 - [Next-holiday](https://mauriciomutte.github.io/Next-holiday)
 - [My-books-for-2017](https://mauriciomutte.github.io/My-books-for-2017/)
