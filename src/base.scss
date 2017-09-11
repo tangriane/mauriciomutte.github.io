@@ -53,75 +53,58 @@ a {
   }
 }
 
-.button {
+.btn {
+  box-sizing: border-box;
+  background: {
+    image: linear-gradient(to bottom, $dark-grey 50%, transparent 50%);
+    position: 0% 0%;
+    size: 215%;
+  }
   border: 2px solid $dark-grey;
-  color: $dark-grey;
-  display: block;
-  font-size: .8rem;
-  letter-spacing: 1px;
-  margin: 1em auto;
+  border-radius: 3em;
+  color: $white;
+  display: table;
+  margin: 2em auto;
+  letter-spacing: 2px;
+  padding: .6em 2.2em;
   text-align: center;
-
-  &--black {
-    background-color: $dark-grey;
-    color: $white;
-    font-size: 1rem;   
-    padding: 1px 0;
-
-    &:hover {
-      background-color: $grey;
-      border-color: $grey;
-      text-decoration: none;
-    }
-  }
-
-  &--default {
-    color: $dark-grey;
-    min-width: 200px;
-    text-transform: uppercase;
+  text-transform: uppercase;
+  transition: background 150ms ease-in-out, color 150ms ease-in-out;
+  font-weight: 700;
+  font-size: .7rem;
+  font-family: "Montserrat", sans-serif;
   
-    &:hover {
-      background-color: $dark-grey;
-      color: $white;
-      text-decoration: none;
-    }
+  &:hover,
+  &:focus {
+    background-position: 0 100%;
+    color: $dark-grey;
+    text-decoration: none;
+    outline: 0;
   }
 }
 
-@media (min-width: $screen-sm){
-  .button {
-    display: inline-block;
-  }
-
-  .button--black {
-    min-width: 350px;    
-  }
-  .button--default {
-    font-weight: bold;  
-    min-width: 275px;
-    padding: 2px 0;
-  }
-}
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: .5rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.1;
   color: $dark-grey;
   letter-spacing: -.025rem;
+  font-family: "Montserrat", sans-serif;
+  
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 1.8em;
 }
 
 h2 {
-  font-size: 1.6em;
+  font-size: 1.4em;
 }
 
 h3 {
-  font-size: 1.3em;
+  font-size: 1.1em;
 }
 
 h4, h5, h6 {

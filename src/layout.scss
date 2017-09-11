@@ -92,7 +92,7 @@
 
   &__link {
     color: $white;
-    font-size: .8rem;     
+    font-size: .9rem;
     font-weight: bold;
     margin: 0 10px;
     text-transform: uppercase;
@@ -108,7 +108,7 @@
   text-align: center;
   
   &__title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     letter-spacing: 1px;
   }
   &__resum {
@@ -116,7 +116,7 @@
     text-align: justify;
   }
   &__ability {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     text-align: left;
   }
   &__list {
@@ -131,15 +131,17 @@
 
   &__title {
     color: $grey;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     margin: 1rem 0;
   }
 
   &__noPost {
-    margin: 1.5rem 0;
+    color: $light-grey;
+    margin: 1.2rem 0;
     text-align: center;
   }
   &__post {
+    font-size: 1.2rem;
     margin-bottom: 0;
     letter-spacing: 1px;
 
@@ -176,7 +178,7 @@
 
   &__title {
     color: $grey;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     margin: 1rem 0;
   }
 
@@ -210,7 +212,7 @@
 
   &__title {
     color: $grey;
-    font-size: 2rem;
+    font-size: 1.8rem;
     letter-spacing: 2px;
     margin-bottom: 2em;
     text-align: center;
@@ -229,7 +231,7 @@
 
   &__title {
     color: $white;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     letter-spacing: 1px;
     margin: 0 auto 10px;
     max-width: 600px;
