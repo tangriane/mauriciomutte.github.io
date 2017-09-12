@@ -20,6 +20,7 @@ description: Projetos open-source realizados pelo Maurício
 
 ### 2017
 
+- [Simple-clock](http://mauriciomutte.com/Simple-clock/)
 - [Learning-react](https://github.com/mauriciomutte/Learning-React#learning-react)
 - [ConteudoX](http://mauriciomutte.com/ConteudoX/)
 - [Comangit](https://github.com/mauriciomutte/Comangit#comangit--alguns-comandos-do-git)
