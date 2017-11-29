@@ -14,11 +14,13 @@ layout: default
 {% include minutes-to-read.html %}
 
 <section class="post">
-  <div class="post__header">
-    <h1 class="post__title">{{ page.title }}</h1>
-    <div class="post__date">
-      <time>{{ page.date | date_to_string }}</time>
-      <span> - {{minutesText}}</span>
+  <div class="post__header" style="background-image: url({{ page.image }});">
+    <div class="post__box">
+      <h1 class="post__title">{{ page.title }}</h1>
+      <div class="post__date">
+        <time>{{ page.date | date_to_string }}</time>
+        <span> - {{minutesText}}</span>
+      </div>
     </div>
   </div> 
 
