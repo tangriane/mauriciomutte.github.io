@@ -5,22 +5,26 @@
 
 .container {
   max-width: 38rem;
-  padding: 2rem 1.5rem;
+  padding: 6rem 1.5rem 2rem;
   margin-left:  auto;
   margin-right: auto;
 
   @media (min-width: $screen-sm){
-    padding: 2rem 1rem;
+    padding: 4rem 1rem 2rem;
   }
 }
 
 .header {
-  background-color: $dark-grey;
+  background-color: rgba(0,0,0,0.8);
+  height: 90px;  
   padding: 10px 0 5px;
+  position: absolute;
   text-align: center;
+  width: 100%;
   
   @media (min-width: $screen-sm){
-    padding: 7px 25px 3px;    
+    padding: 7px 25px 3px;
+    height: 53px;
     text-align: left;
 
     &__logo, 
@@ -249,6 +253,10 @@
 
 .post {
 
+  .container {
+    padding: 2rem 1.5rem;
+  }
+
   &__header {
     background-size: 200%;
     background-position: center;
@@ -267,7 +275,7 @@
 
   &__box {
     background-color: rgba(0,0,0,.6);
-    padding: 3rem 0 4rem;
+    padding: 6rem 0 5rem;
   }
 
   &__title {
