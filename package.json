@@ -23,7 +23,7 @@
     "gulp-changed": "^3.1.0",
     "gulp-concat": "^2.6.1",
     "gulp-cssmin": "^0.2.0",
-    "gulp-imagemin": "^3.3.0",
+    "gulp-imagemin": "^3.4.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",
     "gulp-strip-css-comments": "^1.2.0",
