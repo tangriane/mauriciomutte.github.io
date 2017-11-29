@@ -141,34 +141,59 @@
     text-align: center;
   }
   &__post {
-    font-size: 1.2rem;
-    margin-bottom: 0;
-    letter-spacing: 1px;
 
-    &__link {
-      display: block;
-      border-bottom: 1px solid $dark-white;
-      text-align: left;
-      margin: 2rem 0 1rem;
+    background-size: 200%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid $dark-white;
+    border-radius: 5px;
+    display: block;  
+    text-align: left;
+    margin: 2rem 0 1rem;
 
-      &:hover {
-        border-color: $grey;
-        text-decoration: none;
-      }
-  
-      &:hover .homeBlog__post {
-        color: $grey;       
+    &:hover {
+      border-color: $grey;
+      text-decoration: none;
+    }
+
+    &:hover .homeBlog__post {
+      color: $grey;       
+    }
+
+    @media (min-width: $screen-sm) {
+      background-size: 100%;
+    }
+
+    &__box {
+      background-color: rgba(0,0,0,.7);
+      border-radius: 5px;
+      padding: 4rem 0;
+      width: 100%;
+    }
+
+    &__title {
+      color: $white;
+      font-size: .9rem;
+      margin-bottom: 0;
+      text-align: center;
+      letter-spacing: 1px;
+
+      @media (min-width: $screen-sm) {
+        background-size: 100%;
+        font-size: 1.2rem;      
       }
     }
 
-    &__postDate {
-      color: $grey;
-      font-size: .75rem;
-      margin-bottom: .5rem;
+    &__date {
+      color: $dark-white;
+      font-size: .63rem;
+      text-align: center;
       text-transform: uppercase;
+          
+      @media (min-width: $screen-sm) {
+        font-size: .75rem;      
+      }
     }
-
-    
   }
 }
 
