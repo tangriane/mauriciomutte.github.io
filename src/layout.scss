@@ -158,12 +158,7 @@
     box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.4);
 
     &:hover {
-      border-color: $grey;
       text-decoration: none;
-    }
-
-    &:hover .homeBlog__post {
-      color: $grey;       
     }
 
     @media (min-width: $screen-sm) {
@@ -174,7 +169,12 @@
       background-color: rgba(0,0,0,.7);
       border-radius: 5px;
       padding: 4rem 0;
+      transition: .2s;
       width: 100%;
+
+      &:hover {
+        background-color: rgba(0,0,0,.6);
+      }
     }
 
     &__title {
