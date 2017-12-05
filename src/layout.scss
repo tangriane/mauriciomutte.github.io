@@ -4,8 +4,8 @@
 }
 
 .container {
-  max-width: 38rem;
-  padding: 6rem 1.5rem 2rem;
+  max-width: 45rem;
+  padding: 6rem 1.2rem 2rem;
   margin-left:  auto;
   margin-right: auto;
 
@@ -214,27 +214,49 @@
   }
 
   &__list {
-    text-align: left;
-    padding-bottom: .5rem;
+    margin: .5em 0;
+
+    @media (min-width: $screen-md) {
+      margin: 3em 0;
+    }
   }
 
   &__project {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: table;
     list-style: none;
-    margin-top: 1.2rem;
-    
+    margin: 1em auto;
+
+    &:hover {
+      border: 1px solid #a8a8a8;
+    }
+
+    @media (min-width: $screen-md) {
+      display: inline-block;
+      margin: 0 2%;      
+    }
+
     &__link {
-      border-bottom: 1px solid $dark-white;      
-      color: $grey;
-      display: block;
-      font-size: 1.2rem;
-      margin-top: .5em;
-      padding-bottom: .3rem;
-    
+      display: table;
+      width: 260px;
+      padding: .6em .3em .4em;
+
       &:hover {
         text-decoration: none;
-        color: $dark-grey;
-        border-color: $grey;
       }
+    }
+
+    &__img {
+      display: inline-block;
+      height: 200px;
+      margin: 0 0 0 0;
+      width: auto;
+    }
+
+    &__name {
+      letter-spacing: 1px;
+      font-size: 24px;
     }
   }
 }
