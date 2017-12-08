@@ -47,7 +47,7 @@ gulp.task('js', function(){
 
 // Images task
 gulp.task('images', function(){
-	gulp.src(['src/img/*.jpg', 'src/img/*.png'])
+	gulp.src(['src/img/**/*.jpg', 'src/img/**/*.png'])
 		.pipe(imagemin({optimizationLevel: 5, progressive: true, interlaced: true}))
 		.pipe(gulp.dest('assets/img/'))
 })
