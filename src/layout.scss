@@ -312,6 +312,17 @@
     font-size: .75rem;
     text-transform: uppercase;
   }
+
+  &__content {
+
+    & p {
+      text-align: justify;
+
+      & img {
+        margin: auto;
+      }
+    }
+  }
 }
 
 .share {
