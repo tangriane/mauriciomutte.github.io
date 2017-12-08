@@ -11,8 +11,8 @@
   <meta name="twitter:site" content="@{{ site.twitter_username }}">
   <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
   <meta name="twitter:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  {% if page.image %}
-  <meta property="twitter:image:src" content="{{ site.url }}{{page.image }}">
+  {% if post.image %}
+  <meta property="twitter:image:src" content="{{ site.url }}{{post.image }}">
   {% else %}
   <meta property="twitter:image:src" content="{{ "/assets/img/blog-capa.png" | prepend: site.url }}">
   {% endif %}
@@ -20,8 +20,8 @@
   <!-- Social: Facebook / Open Graph -->
   <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}">
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-  {% if page.image %}
-  <meta property="og:image" content="{{ site.url }}{{page.image }}">
+  {% if post.image %}
+  <meta property="og:image" content="{{ site.url }}{{post.image }}">
   {% else %}
   <meta property="og:image" content="{{ "/assets/img/blog-capa.png" | prepend: site.url }}">
   {% endif %}
